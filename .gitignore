@@ -22,6 +22,10 @@ build/
 
 # VSCode
 .vscode/
+#And
+venv/
+media/
+
 
 # OS
 .DS_Store
