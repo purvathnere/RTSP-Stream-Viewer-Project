@@ -1,4 +1,4 @@
- #RTSP Stream Viewer
+ # RTSP Stream Viewer
 A full-stack web application to view live RTSP streams directly in the browser.
 This project allows users to input RTSP stream URLs and watch multiple streams simultaneously with basic controls (play/pause). Built with React.js (frontend), Django (backend), and FFmpeg for RTSP to HLS conversion.
 #Tech Stack
@@ -43,9 +43,11 @@ http://127.0.0.1:8000/media/streams/<stream-id>/index.m3u8
 `ffmpeg -version
 `
 #convert RTSP stream to HLS format:
+`
 mkdir media/streams/<stream-id>
 ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 -i "<rtsp-url>" -c:v copy -hls_time 10 -hls_list_size 6 -hls_flags delete_segments \
 media/streams/<stream-id>/index.m3u8
+`
 
 
