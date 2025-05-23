@@ -37,9 +37,11 @@ npm install
 npm start
 ```
 Open your browser and visit: http://localhost:3000
-# Open in Browser to check URL is correct or not( it downaload)
+
+Open in Browser to check URL is correct or not( it downaload)
 http://127.0.0.1:8000/media/streams/<stream-id>/index.m3u8
-#FFmpeg Setup (for RTSP to HLS)
+
+# FFmpeg Setup (for RTSP to HLS)
 `ffmpeg -version
 `
 #convert RTSP stream to HLS format:
