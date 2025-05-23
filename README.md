@@ -44,7 +44,7 @@ http://127.0.0.1:8000/media/streams/<stream-id>/index.m3u8
 # FFmpeg Setup (for RTSP to HLS)
 `ffmpeg -version
 `
-#convert RTSP stream to HLS format:
+# convert RTSP stream to HLS format:
 `
 mkdir media/streams/<stream-id>
 ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
