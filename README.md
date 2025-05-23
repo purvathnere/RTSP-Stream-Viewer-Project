@@ -50,14 +50,13 @@ ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 media/streams/<stream-id>/index.m3u8
 `
 
-# 📂 Stream Directory Creation (Windows)
+#  Stream Directory Creation (Windows)
 
-Before converting RTSP to HLS, create a folder for your stream:
-
+folder creation
 `
 New-Item -ItemType Directory -Path "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>" -Force`
 
-## 🎞️ RTSP to HLS Conversion (FFmpeg)
+#  RTSP to HLS Conversion (FFmpeg)
 
 Use `FFmpeg` to convert RTSP stream to HLS format:
 
