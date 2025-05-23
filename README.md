@@ -69,5 +69,5 @@ ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>\index.m3u8 `
 
 
-### Backend run = python manage.py runserver ( Django )
-### frontend = npm start ( React )
+ Backend run = python manage.py runserver ( Django )
+ frontend = npm start ( React )
