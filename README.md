@@ -60,7 +60,7 @@ New-Item -ItemType Directory -Path "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp
 
 Use `FFmpeg` to convert RTSP stream to HLS format:
 
-`bash
+`
 ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 -i "rtsp://admin:admin123@49.248.155.178:555/cam/realmonitor?channel=1&subtype=0" \
 -c:v copy -hls_time 10 -hls_list_size 6 -hls_flags delete_segments \
