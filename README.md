@@ -27,7 +27,7 @@ python manage.py runserver
 
 ```
 Server start at: http://127.0.0.1:8000
-## Frontend Setup (React)
+## Frontend Setup React
 ```
 cd ../frontend
 
@@ -42,7 +42,7 @@ Open your browser and visit: http://localhost:3000
 Open in Browser to check URL is correct or not( it downaload)
 http://127.0.0.1:8000/media/streams/<stream-id>/index.m3u8
 
-## FFmpeg Setup (for RTSP to HLS)
+## FFmpeg Setup RTSP to HLS
 `ffmpeg -version
 `
 # convert RTSP stream to HLS format:
@@ -53,13 +53,13 @@ ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 media/streams/<stream-id>/index.m3u8
 `
 
-##  Stream Directory Creation (Windows)
+##  Stream directory Creation for windows
 
 folder creation
 `
 New-Item -ItemType Directory -Path "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>" -Force`
 
-##  RTSP to HLS Conversion (FFmpeg)
+##  RTSP to HLS Conversion FFmpeg
 
 Use `FFmpeg` to convert RTSP stream to HLS format:
 
