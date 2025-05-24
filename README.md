@@ -43,32 +43,34 @@ Open in Browser to check URL is correct or not( it downaload)
 http://127.0.0.1:8000/media/streams/<stream-id>/index.m3u8
 
 ## FFmpeg Setup RTSP to HLS
-`ffmpeg -version
-`
+```ffmpeg -version
+```
 # convert RTSP stream to HLS format:
-`
+```
 mkdir media/streams/<stream-id>
 ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 -i "<rtsp-url>" -c:v copy -hls_time 10 -hls_list_size 6 -hls_flags delete_segments \
 media/streams/<stream-id>/index.m3u8
-`
+```
 
 ##  Stream directory Creation for windows
 
 folder creation
-`
-New-Item -ItemType Directory -Path "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>" -Force`
+
+```New-Item -ItemType Directory -Path "C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>" -Force ```
 
 ##  RTSP to HLS Conversion FFmpeg
 
 Use `FFmpeg` to convert RTSP stream to HLS format:
 
-`
+
+```
 ffmpeg -rtsp_transport tcp -analyzeduration 10000000 -probesize 10000000 \
 -i "rtsp://admin:admin123@49.248.155.178:555/cam/realmonitor?channel=1&subtype=0" \
 -c:v copy -hls_time 10 -hls_list_size 6 -hls_flags delete_segments \
-"C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>\index.m3u8 `
+"C:\Users\HP\OneDrive\Desktop\colne rstp\rtsp-stream-viewer\media\streams\<stream-id>\index.m3u8
+```
 
 
- Backend run = python manage.py runserver ( Django )
- frontend = npm start ( React )
+ Backend run : python manage.py runserver ( Django )
+ frontend : npm start ( React )
